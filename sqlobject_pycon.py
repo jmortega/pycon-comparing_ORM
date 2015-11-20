@@ -301,7 +301,7 @@ def select_events_track(idTrack):
 	for event in Set(events):
 		print event.track.name + " " + event.type + " " +event.description
 		for speaker in Set(event.speakers):
-			print speaker.name
+			print speaker.name.encode('utf-8')
 			print '***********'
 
 	
@@ -314,7 +314,7 @@ def select_speakers():
 	speakers = list(Speaker.select())
 	speakers = Set(Speaker.selectBy())
 	for speaker in Set(speakers):
-		print speaker.name
+		print speaker.name.encode('utf-8')
 
 def select_Events_byDescription(description):
 	print '\select_Events_byDescription'
@@ -362,14 +362,14 @@ def select_WorkShops_Talks():
 	print '--------------'
 	events = Event.select(LIKE(Event.q.type, "workshop"))
 	for event in Set(events):
-		print event.description
+		print event.description.encode('utf-8')
 
 	print '\nTalks'
 	print '--------------'
 
 	events = Event.select(LIKE(Event.q.type, "talk"))
 	for event in Set(events):
-		print event.description
+		print event.description.encode('utf-8')
 
 if __name__ == "__main__":
 		

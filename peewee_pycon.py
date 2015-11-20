@@ -462,7 +462,7 @@ if __name__ == "__main__":
     
 	create_schema()
 
-	#insert_speakers_tracks_events()
+	insert_speakers_tracks_events()
 	
 	select_tracks()
 	
